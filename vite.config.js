@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   // Mevcut dosya yapısını koru
   root: '.',
-  base: '/Glitchidea-portfolyo/',
+  base: process.env.DEPLOY_TARGET === 'azure' ? '/' : '/Glitchidea-portfolyo/',
   
   // Build ayarları
   build: {
