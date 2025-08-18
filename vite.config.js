@@ -16,7 +16,6 @@ export default defineConfig({
         services: 'services.html',
         blog: 'blog.html',
         work: 'work.html',
-        hidden: 'hidden.html',
         scii: 'scii.html'
       }
     }
