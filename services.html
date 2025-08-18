@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLITCH - Hizmetlerim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/services.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Geri Dön
+  </a>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+      <h1 class="hero-title">Profesyonel Hizmetler</h1>
+      <p class="hero-subtitle">
+        Sistem mimarisi, otomasyon, güvenlik ve teknik altyapı konularında 
+        profesyonel danışmanlık ve uygulama hizmetleri sunuyorum.
+      </p>
+      <div class="hero-stats" id="heroStats">
+        <!-- İstatistikler dinamik olarak yüklenecek -->
+      </div>
+    </section>
+    
+    <!-- Services Navigation -->
+    <section class="services-nav fade-in">
+      <div class="nav-container">
+        <button class="nav-btn active" data-category="all">
+          <span class="nav-icon">🌟</span>
+          <span class="nav-text">Tümü</span>
+        </button>
+        <button class="nav-btn" data-category="consulting">
+          <span class="nav-icon">💼</span>
+          <span class="nav-text">Danışmanlık</span>
+        </button>
+        <button class="nav-btn" data-category="technical">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-text">Teknik</span>
+        </button>
+      </div>
+    </section>
+    
+    <!-- Services Grid -->
+    <section class="services-section fade-in">
+      <div class="services-grid" id="servicesGrid">
+        <!-- Servisler dinamik olarak yüklenecek -->
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact fade-in">
+      <h2 class="contact-title">Birlikte Çalışalım</h2>
+      <p class="contact-description">
+        Hangi hizmete ihtiyacınız olursa olsun, profesyonel çözümler için benimle iletişime geçin. 
+        İhtiyaçlarınızı analiz ederek size özel çözümler geliştirelim.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contact@ophianox.com" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+          E-posta Gönder
+        </a>
+        <a href="projects.html" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14,2 14,8 20,8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10,9 9,9 8,9"/>
+          </svg>
+          Projelerimi Gör
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html> 

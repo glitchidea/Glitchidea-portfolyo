@@ -1,0 +1,258 @@
+/* ===== MAIN CSS - ORTAK STİLLER ===== */
+
+/* CSS Variables - Tüm dosyalarda aynı */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #d4af37;
+  --gold-light: #e6c97a;
+  --gold-dark: #b8860b;
+  --dark-gray: #111111;
+  --medium-gray: #1a1a1a;
+  --light-gray: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --terminal-green: #00ff41;
+  --terminal-red: #ff0040;
+  --terminal-blue: #0080ff;
+  --transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reset - Tüm dosyalarda aynı */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 200;
+}
+
+/* Back Button - Tüm sayfalarda aynı */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+}
+
+.back-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.back-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Main Content - Tüm sayfalarda aynı */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 4rem;
+}
+
+/* Container - Tüm sayfalarda aynı */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* Hero Section - Tüm sayfalarda aynı */
+.hero {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 4rem);
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 200;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Hero Stats - Tüm sayfalarda aynı */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Section Header - Tüm sayfalarda aynı */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 200;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Contact Section - Tüm sayfalarda aynı */
+.contact {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-weight: 200;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  transition: all 0.4s ease;
+}
+
+.contact-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Fade-in Animation - Tüm sayfalarda aynı */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design - Tüm sayfalarda aynı */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 4rem 2rem;
+  }
+  
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .back-btn {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+} 

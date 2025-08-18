@@ -1,0 +1,39 @@
+{
+  "contact": {
+    "email": {
+      "active": true,
+      "address": "",
+      "title": "E-posta",
+      "description": "Doğrudan iletişim için e-posta gönderin",
+      "icon": "mail"
+    },
+    "website": {
+      "active": true,
+      "url": "",
+      "title": "Web Sitesi",
+      "description": "Projelerimi inceleyin",
+      "icon": "globe"
+    },
+    "medium": {
+      "active": true,
+      "url": "https://medium.com/@Glitchidea",
+      "username": "@Glitchidea",
+      "title": "Medium",
+      "description": "Blog yazılarımı ve makalelerimi okuyun",
+      "icon": "book-open"
+    },
+
+    "github": {
+      "active": true,
+      "url": "https://github.com/glitchidea",
+      "username": "",
+      "title": "GitHub",
+      "description": "Kod projelerimi inceleyin",
+      "icon": "github"
+    }
+  },
+  "pageInfo": {
+    "title": "İletişim",
+    "subtitle": "Siber güvenlik projeleri, işbirliği fırsatları veya sadece merhaba demek için benimle iletişime geçebilirsiniz."
+  }
+}

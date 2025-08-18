@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLITCH - Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Geri Dön
+  </a>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">Blog</h1>
+      <p class="hero-subtitle">
+        Blog yazılarım. Siber güvenlik, teknoloji ve yazılım geliştirme konularında 
+        deneyimlerimi ve öğrendiklerimi paylaştığım içerikler.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" id="totalPosts">-</div>
+          <div class="stat-label">Blog Yazısı</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2024</div>
+          <div class="stat-label">Aktif Yıl</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Loading Section -->
+    <section class="loading-section" id="loadingSection">
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Blog yazıları yükleniyor...</p>
+      </div>
+    </section>
+    
+    <!-- Blog Items -->
+    <section class="blog-items" id="blogItems" style="display: none;">
+      <!-- Blog items will be dynamically loaded here -->
+    </section>
+    
+    <!-- Error Section -->
+    <section class="error-section" id="errorSection" style="display: none;">
+      <div class="error-content">
+        <h2>Yazılar Yüklenemedi</h2>
+        <p>Blog yazıları yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>
+        <button class="retry-btn" id="retryBtn">Tekrar Dene</button>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2 class="contact-title">Birlikte Öğrenelim</h2>
+      <p class="contact-description">
+        Siber güvenlik konularında daha fazla içerik ve güncelleme için 
+        Medium sayfamı ziyaret edebilir veya benimle iletişime geçebilirsiniz.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contact@ophianox.com" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+          E-posta Gönder
+        </a>
+        <a href="/hizmetlerim" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+          Hizmetlerim
+        </a>
+        <a href="https://medium.com/@Glitchidea" target="_blank" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          Medium
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html> 

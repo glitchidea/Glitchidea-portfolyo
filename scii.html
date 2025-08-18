@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCII - Restricted Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Playfair+Display:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/scii.css">
+</head>
+<body>
+    <div class="matrix-bg" id="matrixBg"></div>
+    
+    <a href="index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Geri Dön
+    </a>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="fade-in">SCII</h1>
+            <p class="subtitle fade-in">Secret SCII Art Collection</p>
+        </div>
+
+        <div class="ascii-gallery">
+            <!-- Security Shield -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Security Shield</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'shield')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="shield">
+╔══════════════════════════════════════╗
+║                                      ║
+║    ██████╗ ███████╗ ██████╗██╗   ██╗ ║
+║    ██╔══██╗██╔════╝██╔════╝██║   ██║ ║
+║    ██████╔╝█████╗  ██║     ██║   ██║ ║
+║    ██╔══██╗██╔══╝  ██║     ██║   ██║ ║
+║    ██║  ██║███████╗╚██████╗╚██████╔╝ ║
+║    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝  ║
+║                                      ║
+║         🛡️ SECURITY FIRST 🛡️           ║
+║                                      ║
+╚══════════════════════════════════════╝
+</div>
+            </div>
+
+            <!-- Hacker Skull -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Hacker Skull</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'skull')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="skull">        
+         ░░░░░░░██████╗░░░░░░░░
+         ░░░░░██▓▓▓▓▓▓██░░░░░░░
+         ░░░██▓▓▓▓▓▓▓▓▓▓██░░░░░
+         ░░██▓▓▓▓▓▓▓▓▓▓▓▓██░░░░
+         ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓██░░░
+         ██▓▓▓▓████▓▓████▓▓██░░
+         ██▓▓▓▓████▓▓████▓▓██░░
+         ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██░░
+         ░██▓▓▓▓██████▓▓▓▓██░░░
+         ░░██▓▓▓▓▓██▓▓▓▓██░░░░░
+         ░░░██▓▓▓▓▓▓▓▓██░░░░░░░
+         ░░░░░██████████░░░░░░░
+         
+         👽 ETHICAL HACKER 👽</div>
+            </div>
+
+            <!-- Network Topology -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Network Topology</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'network')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="network">     
+      ┌─────┐    ┌─────┐    ┌─────┐
+      │ SRV │────│ FW  │────│ RTR │
+      └─────┘    └─────┘    └─────┘
+         │          │          │
+      ┌─────┐    ┌─────┐    ┌─────┐
+      │ DB  │────│ IDS │────│ DMZ │
+      └─────┘    └─────┘    └─────┘
+         │          │          │
+      ┌─────┐    ┌─────┐    ┌─────┐
+      │ WEB │────│ WAF │────│ LB  │
+      └─────┘    └─────┘    └─────┘
+      
+      🌐 SECURE ARCHITECTURE 🌐</div>
+            </div>
+
+            <!-- Firewall -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Firewall</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'firewall')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="firewall">
+╔═══════════════════════════════════════╗
+║  ████████╗██╗  ██╗██████╗ ███████╗    ║
+║  ╚══██╔══╝██║  ██║██╔══██╗██╔════╝    ║
+║     ██║   ███████║██████╔╝█████╗      ║
+║     ██║   ██╔══██║██╔══██╗██╔══╝      ║
+║     ██║   ██║  ██║██║  ██║███████╗    ║
+║     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ║
+║                                       ║
+║    🔥 FIREWALL PROTECTION ACTIVE 🔥     ║
+║                                       ║
+║  BLOCKED: ████████████████ 99.9%      ║
+║  ALLOWED: ██░░░░░░░░░░░░░░  0.1%      ║
+╚═══════════════════════════════════════╝
+</div>
+            </div>
+
+            <!-- Matrix Code -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Matrix Code</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'matrix')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="matrix">
+║0║1║0║1║0║1║0║1║0║1║0║1║0║1║0║
+║1║0║1║0║1║0║1║0║1║0║1║0║1║0║1║
+║0║1║█║1║0║1║0║█║0║1║0║1║█║1║0║
+║1║0║1║█║1║0║1║0║█║0║1║0║1║█║1║
+║0║1║0║1║█║1║0║1║0║█║0║1║0║1║█║
+║1║0║1║0║1║█║1║0║1║0║█║0║1║0║1║
+║0║1║0║1║0║1║█║1║0║1║0║█║0║1║0║
+║1║0║1║0║1║0║1║█║1║0║1║0║█║0║1║
+
+    🔴 FOLLOW THE WHITE RABBIT 🔴</div>
+            </div>
+
+            <!-- Lock and Key -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Lock & Key</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'lock')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="lock">        
+         ┌─────────────────┐
+         │  ░░░░░░░░░░░░   │
+         │  ░░██░░██░░░░   │
+         │  ░██░░░░██░░░   │
+         │  ░██░░░░██░░░   │
+         │  ░░██████░░░░   │
+         │  ░░░░░░░░░░░░   │
+         │ ╔══════════╗    │
+         │ ║ UNLOCKED ║    │
+         │ ╚══════════╝    │
+         └─────────────────┘
+         
+         🔓 ACCESS GRANTED 🔓</div>
+            </div>
+
+            <!-- Terminal -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Terminal</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'terminal')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="terminal">
+┌─────────────────────────────────┐
+│ ● ● ●           Terminal        │
+├─────────────────────────────────┤
+│ root@hackbox:~$ ls -la          │
+│ drwxr-xr-x 5 root root 4096     │
+│ -rwx------ 1 root root  666     │
+│ -rwx------ 1 root root 1337     │
+│ root@hackbox:~$ ./exploit.sh    │
+│ [+] Target acquired...          │
+│ [+] Payload injected...         │
+│ [+] Shell spawned...            │
+│ [+] Root access gained!         │
+│ root@target:~$ whoami           │
+│ root                            │
+│ root@target:~$ █                │
+└─────────────────────────────────┘
+</div>
+            </div>
+
+            <!-- Binary Tree -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Binary Tree</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'tree')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="tree">           
+            ┌─── 1 ───┐
+            │         │
+         ┌─ 0 ─┐   ┌─ 1 ─┐
+         │     │   │     │
+        0─┐   ┌─1 0─┐   ┌─1
+          │   │     │   │
+         ┌─0 1─┐   ┌─1 0─┐
+         │     │   │     │
+        0─┘   └─1 1─┘   └─0
+
+      🔀 BINARY DECISION TREE 🔀</div>
+            </div>
+
+            <!-- WiFi Signal -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">WiFi Signal</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'wifi')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="wifi">               
+                  ▄▄▄▄▄▄▄▄▄
+               ▄▄█████████████▄▄
+             ▄███████████████████▄
+           ▄█████████████████████▄
+          ███████████████████████
+          ██████████   ██████████
+          ███████       ███████
+          ██████         ██████
+          █████           █████
+          ████             ████
+          ███               ███
+          ██                 ██
+          █                   █
+          
+          📡 NETWORK INFILTRATED 📡</div>
+            </div>
+
+            <!-- Virus -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Virus</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'virus')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="virus">       
+         ░░░▄▄▄▄▄▄▄▄▄▄▄░░░
+         ░▄█████████████▄░
+        ▄███▄█████████▄███▄
+       ████▄▄███████▄▄████
+       ████████████████████
+       ████▀▀███████▀▀████
+        ▀███▀█████████▀███▀
+         ░▀█████████████▀░
+         ░░░▀▀▀▀▀▀▀▀▀▀▀░░░
+         
+      ⚠️ MALWARE DETECTED ⚠️
+      🛡️ QUARANTINED 🛡️</div>
+            </div>
+
+            <!-- Database -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Database</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'database')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="database">    
+     ╔═══════════════════════╗
+     ║ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ║
+     ║ ░░░░░░░░░░░░░░░░░░░░░ ║
+     ╠═══════════════════════╣
+     ║ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ║
+     ║ ░░░░░░░░░░░░░░░░░░░░░ ║
+     ╠═══════════════════════╣
+     ║ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ║
+     ║ ░░░░░░░░░░░░░░░░░░░░░ ║
+     ╠═══════════════════════╣
+     ║ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ║
+     ║ ░░░░░░░░░░░░░░░░░░░░░ ║
+     ╚═══════════════════════╝
+     
+     💾 ENCRYPTED DATABASE 💾</div>
+            </div>
+
+            <!-- Circuit Board -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Circuit Board</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'circuit')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-small" id="circuit">  
+   ╔═══╤═══╤═══╤═══╤═══╗
+   ║ ○ │ ● │ ○ │ ● │ ○ ║
+   ╟───┼───┼───┼───┼───╢
+   ║ ● │█████│ ○ │█████║
+   ╟───┼─────┼───┼─────╢
+   ║ ○ │ ● │ ● │ ○ │ ● ║
+   ╟───┼───┼───┼───┼───╢
+   ║ ● │█████│ ○ │█████║
+   ╟───┼─────┼───┼─────╢
+   ║ ○ │ ● │ ○ │ ● │ ○ ║
+   ╚═══╧═══╧═══╧═══╧═══╝
+   
+   🔌 HARDWARE HACKING 🔌</div>
+            </div>
+
+            <!-- Eye -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Watchful Eye</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'eye')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="eye">       
+         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+       ▄█████████████████████▄
+     ▄███████████████████████▄
+    ████████████████████████████
+   ██████████████▀██████████████
+   ████████████▀   ▀████████████
+   ██████████▀  ███  ▀██████████
+   ████████▀   █████   ▀████████
+   ██████▀    ███████    ▀██████
+   ████▀     █████████     ▀████
+   ██▀      ███████████      ▀██
+   ▀       █████████████       ▀
+          ███████████████
+          
+      👁️ ALWAYS WATCHING 👁️</div>
+            </div>
+
+            <!-- Robot -->
+            <div class="ascii-artwork fade-in">
+                <div class="ascii-header">
+                    <div class="ascii-title">Security Bot</div>
+                    <div class="ascii-actions">
+                        <button class="action-btn" onclick="copyAscii(this, 'robot')">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="action-btn" onclick="animateAscii(this)">
+                            <i class="fas fa-magic"></i> Animate
+                        </button>
+                    </div>
+                </div>
+                <div class="ascii-content ascii-medium" id="robot">        
+         ┌─────────────────┐
+         │ ╔═══╗     ╔═══╗ │
+         │ ║ ● ║  │  ║ ● ║ │
+         │ ╚═══╝     ╚═══╝ │
+         │                 │
+         │    ┌──────────┐ │
+         │    │ ════════ │ │
+         │    └──────────┘ │
+         │                 │
+         │  ┌─┐     ┌─┐    │
+         │  │ │     │ │    │
+         │  └─┘     └─┘    │
+         └─────────────────┘
+         
+         🤖 SECURITY BOT ACTIVE 🤖</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/scii.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>

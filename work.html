@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLITCH - Yapılan İşler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/work.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Geri Dön
+  </a>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">Yapılan İşler</h1>
+      <p class="hero-subtitle">
+        Başkalarının projelerine yaptığım katkılar ve sunduğum hizmetler. 
+        Her iş, farklı ekiplerle çalışarak elde ettiğim deneyimleri yansıtıyor.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" id="workProjectCount">-</div>
+          <div class="stat-label">Tamamlanan Proje</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="workExperienceYears">-</div>
+          <div class="stat-label">Yıl Deneyim</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Güvenlik Odaklı</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Work Items -->
+    <section class="work-items">
+      <div class="works-grid" id="worksGrid">
+        <!-- İşler dinamik olarak yüklenecek -->
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2 class="contact-title">Birlikte Çalışalım</h2>
+      <p class="contact-description">
+        Projeleriniz için güvenilir ve deneyimli bir partner arıyorsanız, 
+        benimle iletişime geçebilirsiniz.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contact@ophianox.com" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+          E-posta Gönder
+        </a>
+        <a href="services.html" class="contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+          Hizmetlerim
+        </a>
+      </div>
+    </section>
+  </main>
+  
+
+
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/work-pars.js"></script>
+  <script src="assets/js/work.js"></script>
+  <script src="assets/js/work-popup.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html> 
