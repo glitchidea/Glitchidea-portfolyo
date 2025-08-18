@@ -79,7 +79,7 @@ class ProjectLoader {
     try {
       console.log('Proje verileri JSON dosyasından yükleniyor...');
       
-      const response = await fetch('/projects.json');
+      const response = await fetch('projects.json');
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);

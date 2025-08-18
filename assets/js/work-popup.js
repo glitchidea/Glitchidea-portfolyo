@@ -103,13 +103,15 @@ class WorkPopup {
     let work = null;
     
     // Önce workLoader'dan dene
-    if (workLoader && workLoader.getWorkById) {
-      work = workLoader.getWorkById(workId);
+    const wl = window.workLoader;
+    if (wl && typeof wl.getWorkById === 'function') {
+      work = wl.getWorkById(workId);
     }
     
     // Sonra aboutWorkLoader'dan dene
-    if (!work && aboutWorkLoader && aboutWorkLoader.getWorkById) {
-      work = aboutWorkLoader.getWorkById(workId);
+    const awl = window.aboutWorkLoader;
+    if (!work && awl && typeof awl.getWorkById === 'function') {
+      work = awl.getWorkById(workId);
     }
     
     if (!work) {
@@ -260,10 +262,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Global fonksiyon - work.js'den çağrılacak
-function openWorkPopup(workId) {
+window.openWorkPopup = function(workId) {
   if (workPopup) {
     workPopup.open(workId);
   } else {
     console.error('WorkPopup henüz başlatılmadı');
   }
-}
+};

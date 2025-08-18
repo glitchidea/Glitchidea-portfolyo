@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   // Mevcut dosya yapısını koru
   root: '.',
+  base: './',
   
   // Build ayarları
   build: {
@@ -16,6 +17,8 @@ export default defineConfig({
         services: 'services.html',
         blog: 'blog.html',
         work: 'work.html',
+        contact: 'contact.html',
+        footer: 'footer.html',
         scii: 'scii.html'
       }
     }

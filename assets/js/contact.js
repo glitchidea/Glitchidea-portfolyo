@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function loadContactData() {
     try {
       // Load contact data from JSON file
-      const response = await fetch('/contact.json');
+      const response = await fetch('contact.json');
       
       if (!response.ok) {
         throw new Error('İletişim verileri yüklenemedi');

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       showLoading();
       
       // Load blog posts from JSON file
-      const response = await fetch('/blog.json');
+      const response = await fetch('blog.json');
       
       if (!response.ok) {
         throw new Error('Blog verileri yüklenemedi');

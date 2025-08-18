@@ -93,7 +93,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 async function loadLatestBlogPost() {
   try {
     // Blog verilerini JSON dosyasından yükle
-    const response = await fetch('/blog.json');
+    const response = await fetch('blog.json');
     
     if (!response.ok) {
       throw new Error('Blog verileri yüklenemedi');
@@ -171,7 +171,7 @@ function showDefaultBlogPost() {
 async function loadWorkShowcase() {
   try {
     // Work verilerini JSON dosyasından yükle
-    const response = await fetch('/works.json');
+    const response = await fetch('works.json');
     
     if (!response.ok) {
       throw new Error('Work verileri yüklenemedi');

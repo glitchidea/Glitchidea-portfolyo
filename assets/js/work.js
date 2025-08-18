@@ -19,14 +19,29 @@ class WorkLoader {
     try {
       console.log('İş verileri works.json dosyasından yükleniyor...');
       
-      if (!workParser) {
-        throw new Error('WorkParser henüz yüklenmedi');
-      }
-
-      // Works array'ini temizle
-      this.works = [];
+      // Önce workParser'ı bekle (maksimum 2 saniye)
+      let attempts = 0;
+      const maxAttempts = 20; // 20 x 100ms = 2 saniye
       
-      this.works = await workParser.loadAllWorks();
+      while (!window.workParser && attempts < maxAttempts) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        attempts++;
+      }
+      
+      if (window.workParser) {
+        // WorkParser varsa onu kullan
+        this.works = await window.workParser.loadAllWorks();
+      } else {
+        // WorkParser yoksa doğrudan fetch et
+        console.log('WorkParser bulunamadı, doğrudan fetch ediliyor...');
+        const response = await fetch('works.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        const data = await response.json();
+        this.works = data.works || [];
+      }
+      
       console.log('Toplam iş sayısı:', this.works.length);
       console.log('Yüklenen işler:', this.works);
       
@@ -140,12 +155,32 @@ class WorkLoader {
 
   // Tip metnini getir
   getTypeText(type) {
-    return workParser ? workParser.getTypeText(type) : 'Diğer';
+    if (window.workParser) {
+      return window.workParser.getTypeText(type);
+    }
+    // Fallback type mapping
+    const types = {
+      'security': 'Güvenlik',
+      'developer': 'Geliştirici',
+      'consulting': 'Danışmanlık',
+      'error': 'Hata'
+    };
+    return types[type] || 'Diğer';
   }
 
   // Durum metnini getir
   getStatusText(status) {
-    return workParser ? workParser.getStatusText(status) : 'Bilinmiyor';
+    if (window.workParser) {
+      return window.workParser.getStatusText(status);
+    }
+    // Fallback status mapping
+    const statuses = {
+      'completed': 'Tamamlandı',
+      'in-progress': 'Devam Ediyor',
+      'planned': 'Planlandı',
+      'error': 'Hata'
+    };
+    return statuses[status] || 'Bilinmiyor';
   }
 
   // İş verilerini getir
@@ -157,7 +192,7 @@ class WorkLoader {
   async updateWorkStats() {
     try {
       // Projeleri yükle
-      const projectsResponse = await fetch('/projects.json');
+      const projectsResponse = await fetch('projects.json');
       const projects = await projectsResponse.json();
       
       // Deneyim yılını hesapla (2023'ten itibaren)
@@ -198,6 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Kısa bir gecikme ile başlat
   setTimeout(() => {
     workLoader = new WorkLoader();
+    // Modül ortamında global erişim için window'a ekle
+    window.workLoader = workLoader;
   }, 100);
 });
 

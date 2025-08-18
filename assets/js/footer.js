@@ -1,15 +1,7 @@
 // Footer loader
+import '../css/footer.css';
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Footer loader başlatıldı');
-  
-  // Footer CSS'ini yükle
-  if (!document.querySelector('link[href="assets/css/footer.css"]')) {
-    const footerCSS = document.createElement('link');
-    footerCSS.rel = 'stylesheet';
-    footerCSS.href = 'assets/css/footer.css';
-    document.head.appendChild(footerCSS);
-    console.log('Footer CSS yüklendi');
-  }
   
   // Footer HTML'ini yükle
   fetch('footer.html')
@@ -40,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   async function loadFooterEmailFromJson() {
     try {
-      const response = await fetch('/contact.json');
+      const response = await fetch('contact.json');
       if (!response.ok) {
         throw new Error('Footer iletişim verileri yüklenemedi');
       }

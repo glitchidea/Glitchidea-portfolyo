@@ -20,14 +20,29 @@ class AboutWorkLoader {
     try {
       console.log('Yıldızlı işler work-pars.js\'den yükleniyor...');
       
-      if (!workParser) {
-        throw new Error('WorkParser henüz yüklenmedi');
-      }
-
-      // Works array'ini temizle
-      this.works = [];
+      // Önce workParser'ı bekle (maksimum 2 saniye)
+      let attempts = 0;
+      const maxAttempts = 20; // 20 x 100ms = 2 saniye
       
-      this.works = await workParser.loadStarredWorks();
+      while (!window.workParser && attempts < maxAttempts) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        attempts++;
+      }
+      
+      if (window.workParser) {
+        // WorkParser varsa onu kullan
+        this.works = await window.workParser.loadStarredWorks();
+      } else {
+        // WorkParser yoksa doğrudan fetch et ve yıldızlı olanları filtrele
+        console.log('WorkParser bulunamadı, doğrudan fetch ediliyor...');
+        const response = await fetch('works.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        const data = await response.json();
+        this.works = (data.works || []).filter(work => work.stars === 'yes');
+      }
+      
       console.log('Toplam yıldızlı iş sayısı:', this.works.length);
       console.log('Yıldızlı işler:', this.works);
       
@@ -227,7 +242,7 @@ class AboutWorkLoader {
   async setupOphironHeroLink() {
     try {
       // Ophiron'u projects.json'dan yükle
-      const projectsResponse = await fetch('/projects.json');
+      const projectsResponse = await fetch('projects.json');
       const projects = await projectsResponse.json();
       
       const ophironProject = projects.find(project => project.title === 'Ophiron Platform');
@@ -257,11 +272,11 @@ class AboutWorkLoader {
   async updateStats() {
     try {
       // Projeleri yükle
-      const projectsResponse = await fetch('/projects.json');
+      const projectsResponse = await fetch('projects.json');
       const projects = await projectsResponse.json();
       
       // Works.json'u yükle ve stats'i dinamik hesapla
-      const worksResponse = await fetch('/works.json');
+      const worksResponse = await fetch('works.json');
       const worksData = await worksResponse.json();
       
       // Works stats'ini dinamik hesapla (dosyaya yazmadan)
@@ -338,9 +353,40 @@ document.addEventListener('DOMContentLoaded', function() {
   // Kısa bir gecikme ile başlat
   setTimeout(() => {
     aboutWorkLoader = new AboutWorkLoader();
+    // Modül ortamında global erişim için window'a ekle
+    window.aboutWorkLoader = aboutWorkLoader;
   }, 100);
+  
+  // Email butonunu JSON'dan yükle
+  loadEmailFromJson();
 });
 
+// Email yükleme fonksiyonu
+async function loadEmailFromJson() {
+  try {
+    const response = await fetch('contact.json');
+    if (!response.ok) {
+      throw new Error('İletişim verileri yüklenemedi');
+    }
+    
+    const data = await response.json();
+    const email = data?.contact?.email?.address;
+    const active = data?.contact?.email?.active;
+    
+    const emailButton = document.querySelector('.contact-btn[href^="mailto:"]');
+    
+    if (emailButton && active && email && email.trim() !== '') {
+      emailButton.href = `mailto:${email}`;
+      console.log('About sayfası email butonu güncellendi:', email);
+    } else if (emailButton) {
+      // Email pasif veya boşsa butonu gizle
+      emailButton.style.display = 'none';
+      console.log('Email butonu gizlendi (pasif veya boş)');
+    }
+  } catch (err) {
+    console.error('About sayfası email yükleme hatası:', err);
+  }
+}
 
 
 // Scroll animations
