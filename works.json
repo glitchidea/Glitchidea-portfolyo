@@ -1,0 +1,41 @@
+{
+  "works": [
+    {
+      "id": "system-update-healthcheck-script",
+      "title": "Sistem Güncelleme ve Sağlık Kontrol Scripti",
+      "type": "developer",
+      "client": "Anonim Şirket",
+      "date": "2024-10-01",
+      "duration": "2 hafta",
+      "description": "Sistem güncellemelerini kontrol eden, servis/ süreç durumlarını izleyen ve log-yedekleme kontrollerini yapan otomasyon scripti",
+      "content": "Anonim bir müşteri için Windows ve Linux sunucularda çalışan, planlanmış görev olarak düzenli çalışan bir otomasyon scripti geliştirdim. Script; işletim sistemi ve paket güncellemelerini denetler, kritik servislerin çalışırlığını ve yeniden başlatma gereksinimini kontrol eder, disk kullanımını ve log büyümesini izler, yedekleme bütünlüğünü doğrular ve sonuçları JSON/HTML rapor olarak üretir. Eşik değer aşımlarında e-posta/Slack bildirimi gönderir. Yapılandırılabilir modüler mimari ile idempotent çalışır ve ayrıntılı loglama sağlar.",
+      "technologies": [
+        "PowerShell",
+        "Bash",
+        "Python",
+        "Windows Update",
+        "APT/YUM"
+      ],
+      "tools": [
+        "Task Scheduler",
+        "Cron",
+        "Monitoring",
+        "Notification",
+        "Logging"
+      ],
+      "results": [
+        "%80 manuel işlem azaltıldı",
+        "Otomatik günlük/haftalık raporlama",
+        "Kritik servis kesintileri hızlı tespit edildi",
+        "Güncellemeler düzenli uygulandı"
+      ],
+      "link": "",
+      "image": "⚙️",
+      "status": "completed",
+      "stars": "yes"
+    }
+  ],
+  "stats": {
+    "note": "Bu istatistikler dinamik olarak hesaplanmaktadır"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Siber Güvenlikte Yolculuğum: 3 Yılda Öğrendiklerim",
+      "date": "18 Ağustos 2025",
+      "author": "Glitch İdea",
+      "category": "Cybersecurity",
+      "description": "Siber güvenlik serüvenim aslında basit meraklarla başladı: ping atmak, domain sorguları yapmak ve temel komutlarla oynamak… Fakat ilk kendi… ",
+      "tags": [
+        "Docker"
+      ],
+      "link": "https://medium.com/@Glitchidea/siber-g%C3%BCvenlikte-yolculu%C4%9Fum-3-y%C4%B1lda-%C3%B6%C4%9Frendiklerim-b4f57cb3f69d",
+      "isLatest": true
+    }
+  ]
+}

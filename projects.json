@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Docker Manager Pro",
+    "icon": "🐳",
+    "category": "product",
+    "status": "active",
+    "description": "Docker container yönetimi ve orchestration platformu",
+    "features": [
+      "Container Yönetimi",
+      "Orchestration",
+      "Monitoring"
+    ],
+    "showOnIndex": false,
+    "link": ""
+  },
+  {
+    "title": "Ophiron Platform",
+    "icon": "🚀",
+    "category": "product",
+    "status": "active",
+    "showOnIndex": true,
+    "description": "Kapsamlı siber güvenlik platformu",
+    "features": [
+      "Security Suite",
+      "Threat Intelligence",
+      "Incident Response"
+    ],
+    "link": ""
+  }
+]

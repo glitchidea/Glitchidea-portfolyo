@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "title": "Sistem Mimarisi",
+      "icon": "🏗️",
+      "category": "consulting",
+      "status": "active",
+      "description": "Projeye uygun altyapı, araç ve teknoloji seçimi. MVP, scaling, dış kaynak planlaması.",
+      "features": [
+        "Altyapı Planlaması",
+        "Teknoloji Seçimi",
+        "Ölçeklendirme"
+      ]
+    },
+    {
+      "title": "Otomasyon Tasarımı",
+      "icon": "🤖",
+      "category": "consulting",
+      "status": "active",
+      "description": "İş süreçlerinizi otomatikleştirmek için kapsamlı tasarım ve uygulama hizmetleri.",
+      "features": [
+        "Süreç Analizi",
+        "Otomasyon Tasarımı",
+        "Uygulama"
+      ]
+    },
+    {
+      "title": "Veri Toplama Stratejisi",
+      "icon": "📊",
+      "category": "consulting",
+      "status": "active",
+      "description": "Veri toplama, analiz ve görselleştirme için kapsamlı strateji ve uygulama hizmetleri.",
+      "features": [
+        "Veri Kaynakları",
+        "Toplama Stratejisi",
+        "Analiz"
+      ]
+    },
+    {
+      "title": "Siber Güvenlik Çözümleri",
+      "icon": "🛡️",
+      "category": "technical",
+      "status": "active",
+      "description": "Kapsamlı siber güvenlik çözümleri ve güvenlik altyapısı kurulumu.",
+      "features": [
+        "Güvenlik Analizi",
+        "Koruma Sistemleri",
+        "Monitoring"
+      ]
+    },
+    {
+      "title": "API Veri İşleme Platformu",
+      "icon": "🔗",
+      "category": "technical",
+      "status": "active",
+      "description": "3. parti API'lerden veri çekme, işleme ve görselleştirme platformu.",
+      "features": [
+        "API Entegrasyonu",
+        "Veri İşleme",
+        "Görselleştirme"
+      ]
+    },
+    {
+      "title": "Mini CRM Sistemi",
+      "icon": "👥",
+      "category": "technical",
+      "status": "active",
+      "description": "Kişi, müşteri ve görev takibi için sade ama işlevsel CRM sistemi.",
+      "features": [
+        "Müşteri Yönetimi",
+        "Görev Takibi",
+        "Raporlama"
+      ]
+    }
+  ]
+}
