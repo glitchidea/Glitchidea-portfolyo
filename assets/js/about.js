@@ -296,32 +296,16 @@ class AboutWorkLoader {
       const projectCount = projects.length;
       
       // İstatistik elementlerini güncelle
-      const statElements = document.querySelectorAll('.stat-item');
+      // Stats section'daki elementleri güncelle
+      const aboutProjectCount = document.getElementById('aboutProjectCount');
+      const aboutExperienceYears = document.getElementById('aboutExperienceYears');
       
-      if (statElements.length >= 4) {
-        // Tamamlanan Proje sayısı
-        const projectStat = statElements[0].querySelector('.stat-number');
-        if (projectStat) {
-          projectStat.textContent = `${projectCount}+`;
-        }
-        
-        // Yıl Deneyim
-        const experienceStat = statElements[1].querySelector('.stat-number');
-        if (experienceStat) {
-          experienceStat.textContent = `${experienceYears}+`;
-        }
-        
-        // Güvenlik Odaklı (sabit kalabilir)
-        const securityStat = statElements[2].querySelector('.stat-number');
-        if (securityStat) {
-          securityStat.textContent = '100%';
-        }
-        
-        // Sürekli Öğrenme (sabit kalabilir)
-        const learningStat = statElements[3].querySelector('.stat-number');
-        if (learningStat) {
-          learningStat.textContent = '∞';
-        }
+      if (aboutProjectCount) {
+        aboutProjectCount.textContent = `${projectCount}+`;
+      }
+      
+      if (aboutExperienceYears) {
+        aboutExperienceYears.textContent = `${experienceYears}+`;
       }
       
       // Hikayem kısmındaki sayaçları güncelle

@@ -119,6 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (stats) {
       stats.textContent = count;
     }
+    
+    // Aktif yılı güncelle
+    const currentYearElement = document.getElementById('currentYear');
+    if (currentYearElement) {
+      currentYearElement.textContent = new Date().getFullYear();
+    }
   }
   
   function showLoading() {
